@@ -185,6 +185,16 @@ init python:
         except Exception as e:
             print("[DEBUG] CRT reset error: " + str(e))
 
+init python:
+    def _save_current_shader_preset():
+        """Save shader preset using the current filename input."""
+        try:
+            fn = getattr(store, "shader_preset_filename", "my_preset")
+            path = f"yaml/shaders/custom/{fn}.yaml"
+            return preset_save(path)
+        except Exception:
+            return False
+
 screen unified_editor():
     # Check if editor should be shown
     if shader_editor_open:
@@ -709,7 +719,7 @@ screen unified_editor():
                                 input value VariableInputValue("shader_preset_filename") xsize 200
                                 text ".yaml" size 12 color "#999999" yalign 0.5
                                 textbutton "Save":
-                                    action Function(preset_save, "yaml/shaders/custom/" + shader_preset_filename + ".yaml")
+                                    action Function(_save_current_shader_preset)
                                     text_size 12
                                     background Solid("#3a3a3a")
                                     hover_background Solid("#444444")
