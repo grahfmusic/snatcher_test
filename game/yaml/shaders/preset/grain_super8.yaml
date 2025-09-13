@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Super 8
+description: Super 8mm home movie
+effects:
+  grain:
+    preset: vintage
+    intensity: 0.1
+    size: 0.6
+    downscale: 3.2
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

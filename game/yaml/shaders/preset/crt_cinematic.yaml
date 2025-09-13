@@ -1,0 +1,17 @@
+version: '2.1'
+effects:
+  crt:
+    enabled: true
+    warp: 0.18
+    scan: 0.28
+    aberration: 0.012
+    scanline_size: 1.0
+    animated: true
+    aberration_mode: none
+    aberration_speed: 1.0
+    glitch: 0.0
+    glitch_speed: 1.0
+  color_grade:
+    vignette_strength: 0.3
+    vignette_width: 0.24
+    vignette_feather: 1.5

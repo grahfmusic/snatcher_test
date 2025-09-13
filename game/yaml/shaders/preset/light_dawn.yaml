@@ -1,0 +1,17 @@
+version: '1.0'
+meta:
+  name: Dawn
+  description: Pale blue and soft amber split
+lights:
+  - id: blue
+    type: directional
+    direction: [0.7, 0.5]
+    color: [0.7, 0.85, 1.0, 1.0]
+    intensity: 1.4
+    layer: bg
+  - id: amber
+    type: directional
+    direction: [-0.7, 0.5]
+    color: [1.0, 0.8, 0.5, 1.0]
+    intensity: 1.2
+    layer: bg

@@ -1,0 +1,32 @@
+version: "2.1"
+meta:
+  name: Factory Flicker
+  description: Industrial fluorescents with randomized flicker
+  group: Industrial
+globals:
+  strength: 1.0
+  bloom_threshold: 0.85
+  bloom_strength: 0.3
+  bloom_radius: 2.0
+lights:
+  - type: directional
+    position: [320, 160]
+    radius: 560
+    color: [0.9, 1.0, 1.1, 1.0]
+    intensity: 0.8
+    direction: [0.0, 1.0]
+    angle: 1.2
+    layer: front
+    falloff: linear
+    animation: { mode: flicker, min: 0.6, max: 1.3, speed_hz: 7.0, seed: 42 }
+  - type: directional
+    position: [960, 160]
+    radius: 560
+    color: [0.9, 1.0, 1.1, 1.0]
+    intensity: 0.8
+    direction: [0.0, 1.0]
+    angle: 1.2
+    layer: front
+    falloff: linear
+    animation: { mode: flicker, min: 0.6, max: 1.3, speed_hz: 8.5, seed: 1337 }
+

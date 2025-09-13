@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade Day for Night
+description: Underexposed blue-tinted day-for-night effect
+effects:
+  color_grade:
+    preset: day_for_night
+    brightness: -0.4
+    contrast: 1.3
+    saturation: 0.7
+    temperature: -0.6
+    tint: 0.05
+    gamma: 1.2
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Vintage 35mm
+description: 35mm film stock
+effects:
+  grain:
+    preset: vintage
+    intensity: 0.04
+    size: 1.0
+    downscale: 2.0
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade Matrix Green
+description: Digital green tint with lowered saturation
+effects:
+  color_grade:
+    preset: matrix_green
+    brightness: -0.05
+    contrast: 1.4
+    saturation: 0.6
+    temperature: 0.0
+    tint: -0.6
+    gamma: 1.15
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

@@ -1,0 +1,19 @@
+version: '2.1'
+name: CRT Soft
+description: Gentle CRT look
+effects:
+  crt:
+    enabled: true
+    warp: 0.1
+    scan: 0.3
+    aberration: 0.4
+    scanline_size: 1.0
+    animated: false
+    aberration_mode: none
+    aberration_speed: 1.0
+    glitch: 0.0
+    glitch_speed: 1.0
+  color_grade:
+    vignette_strength: 0.2
+    vignette_width: 0.35
+    vignette_feather: 1.5

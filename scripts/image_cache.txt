@@ -1,0 +1,8 @@
+2025-09-11 12:49:19 UTC
+Linux-6.16.6-2-cachyos-x86_64-with-glibc2.42
+Ren'Py 8.4.2.25091001+nightly
+
+----
+renpy/common/00gltest.rpy 348
+----
+renpy/common/00gltest.rpy 348

@@ -1,0 +1,95 @@
+# Room1 Configuration
+# Clean YAML configuration for room1 setup
+
+room_info:
+  id: "room1"
+  name: "Detective's Office"
+  background: "rooms/room1/sprites/room1.png"
+  music: "rooms/room1/audio/music/room1.flac"
+  description: "A dimly lit detective's office with evidence scattered across the desk."
+
+# Room objects configuration
+objects:
+  detective:
+    # Position and size
+    x: 211
+    y: 124
+    width: 328
+    height: 499
+    scale_percent: 100
+    z: 22
+    
+    # Visual properties
+    image: "rooms/room1/sprites/detective.png"
+    description: "Detective Blake stands with a weathered expression, investigating the mysterious disappearances. Years of experience show in every line on their face."
+    box_position: "right"
+    object_type: "character"
+    
+    # Available interactions
+    interactions:
+      - label: "Talk"
+        action: "talk"
+      - label: "Leave"
+        action: "leave"
+    
+    # Character state
+    conversation_state: 0
+    investigation_progress: 0
+    trust_level: 0
+
+  patreon:
+    # Position and size
+    x: 690
+    y: 167
+    width: 364
+    height: 450
+    scale_percent: 100
+    z: 21
+    
+    # Visual properties
+    image: "rooms/room1/sprites/patreon.png"
+    description: "A mysterious flyer with strange symbols. It seems important to the investigation, though its purpose isn't immediately clear."
+    box_position: "right+40"
+    object_type: "item"
+    
+    # Available interactions
+    interactions:
+      - label: "Take"
+        action: "take"
+      - label: "Investigate"
+        action: "investigate"
+      - label: "Leave"
+        action: "leave"
+    
+    # Investigation properties
+    investigation_clues:
+      - "Strange symbols that don't match any known language"
+      - "Paper feels unusually cold to the touch"
+      - "Faint scent of ozone emanates from the flyer"
+    clue_index: 0
+
+# Environmental effects
+lighting:
+  ambient_light: 0.7
+  shadow_intensity: 0.8
+  light_temperature: "cool"
+  flickering_lights: true
+  flicker_intensity: 0.1
+  preset: ambient_cool
+
+# Atmosphere configuration removed - was unused legacy code
+
+# Audio configuration
+audio:
+  music:
+    ambient: "rooms/room1/audio/music/room1.flac"
+    tension: "rooms/room1/audio/music/room1_tension.flac"
+  
+  sfx:
+    detective_footsteps: "rooms/room1/audio/sfx/footsteps_detective.ogg"
+    paper_rustle: "rooms/room1/audio/sfx/paper_rustle.ogg"
+    door_creak: "rooms/room1/audio/sfx/door_creak.ogg"
+  
+  speech:
+    detective_intro: "rooms/room1/audio/speech/detective_intro.ogg"
+    detective_case: "rooms/room1/audio/speech/detective_case_details.ogg"

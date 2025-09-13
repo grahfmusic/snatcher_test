@@ -1,0 +1,20 @@
+version: '1.0'
+meta:
+  name: Back Alley
+  description: Narrow cool beam with warm rim
+lights:
+  - id: cool
+    type: directional
+    direction: [0.2, 0.98]
+    color: [0.6, 0.8, 1.0, 1.0]
+    intensity: 1.5
+    layer: bg
+  - id: warm_rim
+    type: spot
+    position: [1100, 360]
+    radius: 380
+    color: [1.0, 0.6, 0.2, 1.0]
+    intensity: 1.2
+    direction: [-1.0, 0.0]
+    angle: 0.5
+    layer: objects

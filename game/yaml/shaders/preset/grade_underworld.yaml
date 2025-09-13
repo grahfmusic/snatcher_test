@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade Underworld
+description: Dark underworld
+effects:
+  color_grade:
+    preset: underworld
+    brightness: -0.2
+    contrast: 1.9
+    saturation: 0.7
+    temperature: -0.2
+    tint: 0.2
+    gamma: 1.3
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

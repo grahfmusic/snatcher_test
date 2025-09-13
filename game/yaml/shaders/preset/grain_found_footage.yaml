@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Found Footage
+description: Horror found footage style
+effects:
+  grain:
+    preset: heavy
+    intensity: 0.11
+    size: 0.8
+    downscale: 3.5
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

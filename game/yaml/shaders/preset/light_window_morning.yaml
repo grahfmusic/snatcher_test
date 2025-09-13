@@ -1,0 +1,16 @@
+version: '1.0'
+meta:
+  name: Window Morning
+  description: Warm morning light from right side
+lights:
+  - id: sunbeam
+    type: directional
+    direction: [-0.7, 0.7]
+    color: [1.0, 0.92, 0.75, 1.0]
+    intensity: 1.8
+    layer: bg
+  - id: fill
+    type: ambient
+    color: [0.12, 0.10, 0.09, 1.0]
+    intensity: 0.4
+    layer: bg

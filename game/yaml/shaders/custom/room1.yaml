@@ -1,0 +1,40 @@
+version: '2.1'
+effects:
+  crt:
+    enabled: true
+    aberration: 0.028
+    aberration_r: 0.064
+    aberration_g: 0.0
+    aberration_b: 0.064
+    warp: 0.096
+    scan: 0.28
+    scanline_size: 1.0
+    animated: true
+    aberration_mode: pulse
+    aberration_speed: 0.08
+    glitch: 0.0
+    glitch_speed: 1.0
+  grain:
+    preset: coarse
+    intensity: 0.06
+    size: 0.85
+    downscale: 2.5
+    anim_mode: none
+    anim_speed: 1.0
+    anim_amount: 0.35
+  color_grade:
+    preset: green_matrix
+    brightness: 0.06000000000000005
+    contrast: 1.472
+    saturation: 1.2
+    temperature: -0.1
+    tint: 0.3
+    gamma: 1.15
+    vignette_strength: 0.664
+    vignette_width: 0.05
+    vignette_feather: 0.656
+  lighting:
+    preset: 'off'
+    strength: 1.6
+    x: 1024
+    y: 288

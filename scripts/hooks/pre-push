@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# Non-blocking pre-push hook for wiki sync and GitHub README sync
+# Auto-sync if AUTO_SYNC_WIKI=1 or AUTO_SYNC_README=1
+set -euo pipefail
+
+RED="\033[31m"; YEL="\033[33m"; GRN="\033[32m"; NC="\033[0m"
+
+warn() { printf "${YEL}[pre-push] %s${NC}\n" "$*"; }
+info() { printf "[pre-push] %s\n" "$*"; }
+success() { printf "${GRN}[pre-push] %s${NC}\n" "$*"; }
+
+# Function to sync GitHub README with platform-specific modifications
+sync_github_readme() {
+  info "Generating GitHub-specific README..."
+  
+  # Create .github directory if it doesn't exist
+  mkdir -p .github
+  
+  # Process main README.md and create GitHub version
+  if [[ ! -f "README.md" ]]; then
+    warn "README.md not found, skipping GitHub README sync"
+    return 1
+  fi
+  
+  # Transform main README to GitHub version
+  sed -E '
+    # Remove GitLab pipeline badge line
+    /^\[\!\[gitlab pipeline\]/d;
+    
+    # Fix logo path: .gitbook/assets/ → ../Doc/
+    s|\!\[([^\]]*)\]\(\.gitbook/assets/([^\)]+)\)|![\1](../Doc/\2)|g;
+    
+    # Add GitHub mirror badge after license badge if not present
+    /^\[\!\[license: MIT\]/ {
+      a\
+[![GitHub mirror](https://img.shields.io/badge/github-mirror-blue?logo=github)](https://github.com/grahfmusic/snatchernauts_framework)
+    }
+  ' README.md > .github/README.md
+  
+  return 0
+}
+
+# Detect recent changes in README.md among the last 20 commits
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD || echo "")
+if [[ -n "$CURRENT_BRANCH" ]]; then
+  
+  # Check for README.md changes
+  if git log -n 20 --name-only --pretty=format: | grep -qE '^README\.md$'; then
+    if [[ "${AUTO_SYNC_README:-1}" == "1" ]]; then
+      info "README.md changes detected. AUTO_SYNC_README=1 → syncing GitHub README..."
+      if sync_github_readme; then
+        # Add the updated GitHub README to the current commit if there are changes
+        if ! git diff --quiet .github/README.md 2>/dev/null; then
+          git add .github/README.md
+          success "GitHub README synced and added to commit"
+        else
+          info "GitHub README already up to date"
+        fi
+      else
+        warn "GitHub README sync failed; continuing with push"
+      fi
+    else
+      warn "README.md changes detected. Set AUTO_SYNC_README=1 to auto-sync GitHub version."
+    fi
+  fi
+  
+  # Check for Doc changes
+  if git log -n 20 --name-only --pretty=format: | grep -qE '^Doc/'; then
+    if [[ "${AUTO_SYNC_WIKI:-0}" == "1" ]]; then
+      info "Doc changes detected. AUTO_SYNC_WIKI=1 → syncing to both GitLab and GitHub wikis..."
+      if bash scripts/sync-doc.sh; then
+        success "Doc sync completed for both platforms"
+      else
+        warn "Doc sync failed; continuing with code push"
+      fi
+    else
+      warn "Doc changes detected. Run 'scripts/sync-doc.sh' (or set AUTO_SYNC_WIKI=1 to auto-sync)."
+    fi
+  fi
+fi
+
+# Always exit 0 so we don't block pushes
+exit 0

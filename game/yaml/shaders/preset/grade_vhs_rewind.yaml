@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade VHS Rewind
+description: Vintage VHS with muted contrast
+effects:
+  color_grade:
+    preset: vhs_rewind
+    brightness: -0.08
+    contrast: 0.9
+    saturation: 0.85
+    temperature: 0.05
+    tint: -0.2
+    gamma: 0.85
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

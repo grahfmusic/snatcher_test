@@ -1,0 +1,15 @@
+{
+  "name": "snatchernauts_framework",
+  "version": "0.5.4",
+  "description": "Retro-cinematic interactive visual novel framework with shader effects and detective exploration",
+  "build_update": false,
+  "packages": [
+    "win"
+  ],
+  "add_from": true,
+  "force_recompile": true,
+  "android_build": "Release",
+  "tutorial": false,
+  "renamed_all": true,
+  "renamed_steam": true
+}

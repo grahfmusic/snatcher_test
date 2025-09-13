@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Heavy
+description: Strong film grain
+effects:
+  grain:
+    preset: heavy
+    intensity: 0.08
+    size: 0.9
+    downscale: 2.5
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

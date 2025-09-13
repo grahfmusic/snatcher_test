@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Security Cam
+description: Low quality security footage
+effects:
+  grain:
+    preset: iso3200
+    intensity: 0.09
+    size: 1.2
+    downscale: 2.5
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

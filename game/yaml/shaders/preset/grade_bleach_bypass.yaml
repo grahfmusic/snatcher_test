@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade Bleach Bypass
+description: High contrast desaturated
+effects:
+  color_grade:
+    preset: bleach_bypass
+    brightness: 0.1
+    contrast: 2.0
+    saturation: 0.4
+    temperature: 0.0
+    tint: 0.0
+    gamma: 0.85
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

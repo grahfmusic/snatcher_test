@@ -1,0 +1,17 @@
+version: '2.1'
+name: CRT Classic TV
+description: Standard CRT television look
+effects:
+  crt:
+    enabled: true
+    warp: 0.15
+    scan: 0.6
+    aberration: 0.8
+    scanline_size: 1.0
+    animated: false
+    aberration_mode: none
+    glitch: 0.0
+  color_grade:
+    vignette_strength: 0.4
+    vignette_width: 0.3
+    vignette_feather: 1.2
