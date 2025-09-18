@@ -1,0 +1,16 @@
+version: '1.0'
+meta:
+  name: Sunset
+  description: Orange sun with soft magenta fill
+lights:
+  - id: sun
+    type: directional
+    direction: [-0.7, 0.5]
+    color: [1.0, 0.6, 0.2, 1.0]
+    intensity: 1.6
+    layer: bg
+  - id: fill
+    type: ambient
+    color: [0.20, 0.10, 0.18, 1.0]
+    intensity: 0.5
+    layer: bg

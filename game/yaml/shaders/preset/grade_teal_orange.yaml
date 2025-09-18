@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade Teal Orange
+description: Hollywood blockbuster
+effects:
+  color_grade:
+    preset: teal_orange_cinema
+    brightness: 0.05
+    contrast: 1.3
+    saturation: 1.2
+    temperature: 0.1
+    tint: -0.2
+    gamma: 0.95
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

@@ -1,0 +1,17 @@
+version: '1.0'
+meta:
+  name: Cyberpunk
+  description: Strong teal/orange dual lighting
+lights:
+  - id: teal
+    type: directional
+    direction: [0.8, 0.2]
+    color: [0.3, 1.0, 0.9, 1.0]
+    intensity: 1.7
+    layer: bg
+  - id: orange
+    type: directional
+    direction: [-0.8, 0.2]
+    color: [1.0, 0.5, 0.1, 1.0]
+    intensity: 1.7
+    layer: bg

@@ -1,0 +1,14 @@
+version: '1.0'
+meta:
+  name: Spotlight
+  description: Focused white spotlight from left
+lights:
+  - id: spot
+    type: spot
+    position: [200, 200]
+    radius: 420
+    color: [1.0, 1.0, 1.0, 1.0]
+    intensity: 1.8
+    direction: [0.8, 0.2]
+    angle: 0.4
+    layer: objects

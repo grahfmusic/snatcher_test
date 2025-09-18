@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Subtle
+description: Very light grain
+effects:
+  grain:
+    preset: fine
+    intensity: 0.01
+    size: 1.2
+    downscale: 1.5
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

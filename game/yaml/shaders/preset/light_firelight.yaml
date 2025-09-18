@@ -1,0 +1,17 @@
+version: '1.0'
+meta:
+  name: Firelight
+  description: Flickering warm fire glow at bottom-left
+lights:
+  - id: fire
+    type: point
+    position: [220, 640]
+    radius: 320
+    color: [1.0, 0.55, 0.2, 1.0]
+    intensity: 1.8
+    layer: objects
+  - id: smoke
+    type: ambient
+    color: [0.10, 0.08, 0.06, 1.0]
+    intensity: 0.4
+    layer: bg

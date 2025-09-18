@@ -1,0 +1,13 @@
+version: '2.1'
+name: Grain Vintage 16mm
+description: 16mm film stock
+effects:
+  grain:
+    preset: vintage
+    intensity: 0.06
+    size: 0.8
+    downscale: 2.2
+  color_grade:
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2

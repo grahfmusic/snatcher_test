@@ -1,0 +1,30 @@
+version: "2.1"
+meta:
+  name: Police Siren
+  description: Alternating red/blue pulses for emergency scenes
+  group: Effects
+globals:
+  strength: 1.0
+  bloom_threshold: 0.7
+  bloom_strength: 0.9
+  bloom_radius: 3.8
+lights:
+  - type: point
+    position: [540, 240]
+    radius: 360
+    color: [1.4, 0.2, 0.2, 1.0]
+    intensity: 0.0
+    layer: front
+    falloff: quadratic
+    bloom_boost: 1.4
+    animation: { mode: pulse, base: 1.2, amplitude: 1.2, period_s: 1.2, phase: 0.0 }
+  - type: point
+    position: [740, 240]
+    radius: 360
+    color: [0.2, 0.4, 1.6, 1.0]
+    intensity: 0.0
+    layer: front
+    falloff: quadratic
+    bloom_boost: 1.4
+    animation: { mode: pulse, base: 1.2, amplitude: 1.2, period_s: 1.2, phase: 3.14159 }
+

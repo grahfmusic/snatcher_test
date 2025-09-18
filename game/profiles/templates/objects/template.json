@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "type": "objects",
+  "meta": {
+    "id": "template_objects",
+    "name": "Objects Template",
+    "author": "System",
+    "tags": ["template"],
+    "description": "Template for creating new object profiles. Copy and modify as needed."
+  },
+  "extends": null,
+  "objects": [
+    {
+      "id": "example_character",
+      "name": "Example Character",
+      "image": "images/characters/placeholder.png",
+      "position": {
+        "x": 200,
+        "y": 150,
+        "relative": false,
+        "_comment": "Set relative to true for percentage-based positioning"
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "uniform": true,
+        "_comment": "Scale values are multipliers. 1.0 = 100%, 0.5 = 50%, 2.0 = 200%"
+      },
+      "size": {
+        "width": 300,
+        "height": 500,
+        "_comment": "Original size in pixels, used for hitbox calculations"
+      },
+      "zorder": 10,
+      "layer": "master",
+      "object_type": "character",
+      "description": "This is an example character object",
+      "box_position": "right",
+      "float_intensity": 0.5,
+      "interactions": [
+        {
+          "type": "custom",
+          "label": "Talk",
+          "action": "talk",
+          "_comment": "Action will be passed to room logic handler"
+        },
+        {
+          "type": "custom",
+          "label": "Examine",
+          "action": "examine"
+        },
+        {
+          "type": "custom",
+          "label": "Leave",
+          "action": "leave"
+        }
+      ],
+      "shader_profile_id": null,
+      "breathing_profile_id": null,
+      "_comment": "Link to specific shader and breathing profiles if needed"
+    },
+    {
+      "id": "example_item",
+      "name": "Example Item",
+      "image": "images/items/placeholder.png",
+      "position": {
+        "x": 600,
+        "y": 400,
+        "relative": false
+      },
+      "scale": {
+        "x": 1.0,
+        "y": 1.0,
+        "uniform": true
+      },
+      "size": {
+        "width": 100,
+        "height": 100
+      },
+      "zorder": 5,
+      "layer": "master",
+      "object_type": "item",
+      "description": "An interactive item in the scene",
+      "box_position": "center",
+      "interactions": [
+        {
+          "type": "custom",
+          "label": "Pick up",
+          "action": "take"
+        },
+        {
+          "type": "custom",
+          "label": "Examine",
+          "action": "examine"
+        }
+      ]
+    }
+  ],
+  "_comment": "This is a template. Copy this file and modify for your specific needs."
+}

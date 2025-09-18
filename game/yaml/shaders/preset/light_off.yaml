@@ -1,0 +1,5 @@
+version: '1.0'
+meta:
+  name: Off
+  description: No additional lights
+lights: []

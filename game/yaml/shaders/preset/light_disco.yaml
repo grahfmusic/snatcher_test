@@ -1,0 +1,26 @@
+version: '1.0'
+meta:
+  name: Disco
+  description: Colorful party lights
+lights:
+  - id: red
+    type: point
+    position: [360, 160]
+    radius: 280
+    color: [1.0, 0.2, 0.2, 1.0]
+    intensity: 1.4
+    layer: objects
+  - id: green
+    type: point
+    position: [640, 120]
+    radius: 280
+    color: [0.2, 1.0, 0.2, 1.0]
+    intensity: 1.4
+    layer: objects
+  - id: blue
+    type: point
+    position: [920, 160]
+    radius: 280
+    color: [0.2, 0.5, 1.0, 1.0]
+    intensity: 1.4
+    layer: objects

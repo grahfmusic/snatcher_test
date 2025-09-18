@@ -1,0 +1,15 @@
+version: '2.1'
+name: Grade High Key Pastel
+description: Lifted gamma with pastel saturation
+effects:
+  color_grade:
+    preset: high_key_pastel
+    brightness: 0.2
+    contrast: 0.7
+    saturation: 0.8
+    temperature: 0.05
+    tint: 0.08
+    gamma: 0.75
+    vignette_strength: 0.25
+    vignette_width: 0.8
+    vignette_feather: 0.2
